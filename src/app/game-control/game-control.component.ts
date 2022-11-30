@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-game-control',
@@ -7,7 +7,7 @@ import { Component, EventEmitter, OnInit } from '@angular/core';
 })
 export class GameControlComponent implements OnInit {
   time_in_seconds;
-  firedEvent = new EventEmitter<number>();
+  @Output() firedEvent = new EventEmitter<number>();
   count : number = 0;
 
   constructor() { }
