@@ -22,4 +22,8 @@ export class GameControlComponent implements OnInit {
     },1000)
   }
 
+  onGamePause() {
+    clearInterval(this.time_in_seconds)
+  }
+
 }
