@@ -6,7 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+evenNumbers: number[] = [];
+oddNumbers: number[] = [];
+
   onEventFired(eventNumber: number) {
     // console.log(eventNumber)
+    if(eventNumber % 2 === 0) {
+      this.evenNumbers.push(eventNumber);
+    }
+    else{
+      this.oddNumbers.push(eventNumber)
+    }
   }
 }
